@@ -98,7 +98,6 @@ elif app_mode =='Prediction':
         data_url_no = base64.b64encode(contents).decode("utf-8")
         file.close()
    
-   
         loaded_model = pickle.load(open('Random_Forest.sav', 'rb'))
         prediction = loaded_model.predict(single_sample)
         if prediction[0] == 0 :
